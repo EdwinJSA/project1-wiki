@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entry }}
+{% endblock %}
+{% block body %}
+    {{ content_entries }}
+    <a href="{% url 'index' %}">Back to Home</a>
+    <a href="{% url 'edit_Entry' entry=entry %}">Edit</a>
+{% endblock %}
